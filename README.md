@@ -1,32 +1,32 @@
 # SHA256 Collision Finder
 
-## Описание
+## Description
 
-Этот проект представляет собой C++ программу для поиска коллизий хеш-функции SHA256 с использованием метода грубой силы, основанного на парадоксе дней рождения. Программа генерирует случайные входные данные, вычисляет их SHA256 хеши и проверяет, совпадают ли хеши для разных входных данных (коллизия).
+This project is a C++ program for finding SHA256 hash function collisions using a brute-force method based on the birthday paradox. The program generates random input data, calculates their SHA256 hashes and checks if the hashes for different input data match (collision).
 
-**Важное замечание**: Поиск коллизий для SHA256 является вычислительно сложной задачей (требуется порядка 2^128 операций), поэтому на обычном оборудовании, включая мобильные устройства, вероятность нахождения коллизии крайне мала. Программа предназначена для демонстрационных и образовательных целей.
+**Important note**: Finding SHA256 collisions is a computationally difficult task (requires about 2^128 operations), so on common hardware, including mobile devices, the probability of finding a collision is extremely small. The program is intended for demonstration and educational purposes.
 
-## Особенности
+## Features
 
-- Генерация случайных входных строк длиной 16 байт.
-- Вычисление SHA256 хешей с использованием библиотеки OpenSSL.
-- Хранение хешей в `std::map` для проверки коллизий.
-- Отображение прогресса в реальном времени: количество итераций, хешей в секунду и количество сохраненных хешей.
-- Минимизация вывода в логи: обновляющаяся строка состояния.
-- При нахождении коллизии выводится подробная информация: два разных входных сообщения, их общий хеш и время выполнения.
+- Generating random input strings of 16 bytes.
+- Calculating SHA256 hashes using the OpenSSL library.
+- Storing hashes in `std::map` for collision checking.
+- Real-time progress display: iterations, hashes per second, and saved hashes.
+- Minimize log output: live status bar.
+- When a collision is found, detailed information is output: two different input messages, their common hash, and execution time.
 
-## Зависимости
+## Dependencies
 
-- **Компилятор C++**: `clang++` или `g++` (поддерживающий C++11 или выше).
-- **Библиотека OpenSSL**: для вычисления SHA256 хешей.
-- **Стандартная библиотека C++**: для работы с `std::map`, `std::random`, `std::chrono` и других компонентов.
+- **C++ compiler**: `clang++` or `g++` (supporting C++11 or higher).
+- **OpenSSL**: for calculating SHA256 hashes.
+- **C++ Standard Library**: for working with `std::map`, `std::random`, `std::chrono`, and other components.
 
-## Установка и запуск
+## Install and run
 
-### На Linux/macOS
+### On Linux/macOS
 
-1. **Установите зависимости**:
+1. **Install dependencies**:
 
-   ```bash
-   sudo apt update
-   sudo apt install g++ libssl-dev
+```bash
+sudo apt update
+sudo apt install g++ libssl-dev
